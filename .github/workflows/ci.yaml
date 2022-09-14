@@ -29,6 +29,7 @@ jobs:
           - 'check-npm-determinism'
           # TODO: intentionally fails
           # - 'eager-fetch'
+          - 'migrate_rules_nodejs_4_to_rules_js'
           - 'nestjs'
           - 'next.js'
           - 'protobufjs'

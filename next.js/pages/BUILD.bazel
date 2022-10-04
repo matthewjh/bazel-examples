@@ -7,17 +7,10 @@ ts_project(
         "index.tsx",
     ],
     allow_js = True,
+    composite = True,
     declaration = True,
     preserve_jsx = True,
     resolve_json_module = True,
-    # Partial allows us to apply some arguments here, while ts_project applies the rest.
-    # See https://en.wikipedia.org/wiki/Partial_application
-    # and https://docs.aspect.dev/bazelbuild/bazel-skylib/1.1.1/docs/partial.html
-    # TODO: .swcrc configuration is not quite right and using it for these target results in next build errors
-    # transpiler = partial.make(
-    #     swc_transpiler,
-    #     swcrc = "//:swcrc",
-    # ),
     tsconfig = "//:tsconfig",
     visibility = ["//visibility:public"],
     deps = [
